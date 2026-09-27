@@ -1,0 +1,14 @@
+{
+  "model_name": "microsoft/deberta-v3-base",
+  "test_results": {
+    "eval_loss": 0.7213361859321594,
+    "eval_accuracy": 0.47635686000465877,
+    "eval_precision": 0.47635686000465877,
+    "eval_recall": 1.0,
+    "eval_f1": 0.6453139791732407,
+    "eval_runtime": 3.7697,
+    "eval_samples_per_second": 1138.827,
+    "eval_steps_per_second": 35.812,
+    "epoch": 5.0
+  }
+}

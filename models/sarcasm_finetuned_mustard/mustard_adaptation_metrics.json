@@ -1,0 +1,12 @@
+{
+  "dataset": "MUStARD (Castro et al., ACL 2019), 690 utterances, text-only portion",
+  "test_set_size": 104,
+  "before_headline_only": {
+    "accuracy": 0.5,
+    "f1": 0.0
+  },
+  "after_mustard_adapted": {
+    "accuracy": 0.5,
+    "f1": 0.0
+  }
+}

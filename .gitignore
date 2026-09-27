@@ -1,0 +1,59 @@
+# ==========================================
+# Pixora AI - .gitignore
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+*.dll
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Checkpoints and optimizer states
+mustard-checkpoints/
+sarcasm-model-checkpoints/
+checkpoint-*/
+optimizer.pt
+*.ckpt
+
+# Datasets (large image archives; downloaded via scripts / Kaggle)
+datasets/cartoonset100k_jpg/
+datasets/fer2013/
+
+# Large model weights (> 100MB; exceeds GitHub limit)
+# Trained weights can be downloaded or trained in Google Colab (see docs/COLAB_INSTRUCTIONS.md)
+*.safetensors
+models/cartoon_avatar_index/features_deep.npy
+
+# Generated runtime outputs (keep sample memes for reference)
+outputs/*
+!outputs/meme_1788846997.png
+!outputs/pixora_meme_20260908_112527.gif
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables & secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Logs
+*.log

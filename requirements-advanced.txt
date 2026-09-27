@@ -1,0 +1,63 @@
+# OPTIONAL "advanced tier" requirements. Everything here is still free/open-source,
+# but these are large packages (multiple GB) and not needed to run the core app.
+#
+# Install ONLY after you've got the core app working AND you want any of:
+#   (a) the fine-tuned transformer sarcasm model (training/train_advanced_local.py
+#       and/or training/finetune_mustard_local.py)
+#   (b) config.CARTOONIFY_MODE = "gan" (AnimeGANv2 cartoon rendering)
+#   (c) your own trained emotion CNN (training/train_emotion_local.py)
+#   (d) voice input (speak instead of type -- press V in the live app)
+#   (e) LOCALLY GENERATED captions (the default, intended experience --
+#       see modules/captions.py docstring for why this matters) -- without
+#       this installed, the app still runs but silently drops to the
+#       fixed-template caption backup instead of generating
+#
+# IMPORTANT -- install torch SEPARATELY and FIRST, do not just run
+# `pip install -r requirements-advanced.txt` on its own. On Windows (and
+# often elsewhere), plain `pip install torch` from PyPI's default index
+# gives you a CPU-ONLY build -- torch.cuda.is_available() will silently
+# return False, and training will run on CPU without any error telling you
+# why it's slow. This is a real, well-documented gotcha, not an edge case.
+#
+# Step 1 (do this first, exactly once): get your machine's correct command
+# from PyTorch's own live selector -- https://pytorch.org/get-started/locally/
+# -- choose Windows / Pip / Python / and the newest CUDA version listed (your
+# driver supports newer CUDA than what it's currently running via backward
+# compatibility, so picking the newest offered is correct). Copy the exact
+# command it shows you and run it. It will look like:
+#     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cuXXX
+# (the "cuXXX" number changes over time as PyTorch adds support for newer
+# CUDA toolkits -- use whatever the selector shows you TODAY, not a number
+# copied from an old tutorial, blog post, or from this comment.)
+#
+# Step 2: verify it worked BEFORE moving on:
+#     python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+# Must print True and your GPU's name. If it prints False, step 1 didn't
+# take -- see docs/STEP_BY_STEP.md Troubleshooting before continuing.
+#
+# Also verify torchvision landed (it should have, bundled in the same
+# selector command above) -- training/train_emotion_local.py needs it:
+#     python -c "import torchvision; print(torchvision.__version__)"
+# If this errors, run: pip install torchvision --index-url https://download.pytorch.org/whl/cuXXX
+# (same cuXXX tag as your torch install, so the versions stay matched).
+#
+# Step 3: THEN install the rest of this file (Hugging Face Transformers,
+# the tokenizer backend DeBERTa needs, the Dataset class the training
+# script uses, and Accelerate, which modern transformers' Trainer requires
+# internally even for single-GPU training):
+#     pip install -r requirements-advanced.txt
+
+transformers>=4.46.0
+sentencepiece>=0.2.0
+datasets>=2.19.0
+accelerate>=0.26.0
+
+# Voice input (speech-to-text for spoken sarcasm, fully local/free)
+openai-whisper>=20231117
+sounddevice>=0.4.6
+# Note: sounddevice bundles the PortAudio binary in its wheel on Windows/Mac,
+# no separate system install needed. openai-whisper's file-based transcription
+# needs ffmpeg, but this project always passes it a raw numpy array recorded
+# directly at 16kHz (see modules/voice_input.py) specifically to avoid that
+# dependency -- if voice input still errors mentioning ffmpeg, you're on an
+# unexpected code path; check docs/STEP_BY_STEP.md Troubleshooting.

@@ -1,0 +1,17 @@
+{
+  "model": "TF-IDF(1-2gram,40k) + LogisticRegression",
+  "dataset": "News Headlines Dataset for Sarcasm Detection (Misra, 28619 headlines)",
+  "held_out_test_accuracy": 0.8584,
+  "held_out_test_f1": 0.8514,
+  "held_out_confusion_matrix": [
+    [
+      1943,
+      305
+    ],
+    [
+      303,
+      1742
+    ]
+  ],
+  "note": "Metrics computed on a 15% held-out split BEFORE the shipped model was refit on 100% of the data for deployment."
+}

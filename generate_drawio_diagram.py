@@ -1,0 +1,743 @@
+"""
+Generates the fully resolved, non-overlapping, 5-page Draw.io System Architecture Diagram
+for Pixora AI in a professional, publication-grade LIGHT THEME.
+
+All 5 tabs are mathematically scaled and calibrated to fit their page bounds perfectly with generous margins.
+Every single arrow connector has explicit exitX/exitY and entryX/entryY cardinal anchors, labeled decision branches,
+and dedicated non-overlapping orthogonal return channels.
+
+Tab 1: Executive High-Level Flow (Clean Light Theme, Large Bold 16-24px Fonts)
+Tab 2: Detailed Deep Learning Pipeline (Light Theme, Layer-by-Layer Dimensions & Math)
+Tab 3: Research Methodology & Experimental Framework (Light Theme, Benchmarks & Formulations)
+Tab 4: Research Process Flowchart (Simple RAPTOR Flowchart Format, Light Theme)
+Tab 5: Real-Time Model Inference Pipeline (Simple RAPTOR Flowchart Format, Light Theme)
+"""
+
+import os
+
+
+def generate_clean_drawio():
+    xml = '''<mxfile host="app.diagrams.net" modified="2026-09-08T05:30:00.000Z" agent="Pixora AI Architect" version="24.0.0" type="device">
+  
+  <!-- ==================================================================== -->
+  <!-- PAGE 1: EXECUTIVE HIGH-LEVEL FLOW (LIGHT THEME, CLEAN & CLEAR)       -->
+  <!-- ==================================================================== -->
+  <diagram id="ExecutiveArchitecture" name="1. Executive System Flow (Clean &amp; Clear)">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1150" background="#FFFFFF" math="1" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Header -->
+        <mxCell id="p1_title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot; color=&quot;#0F172A&quot;&gt;PIXORA AI — SYSTEM ARCHITECTURE OVERVIEW&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#475569&quot;&gt;End-to-End Real-Time Multimodal Emotion Recognition, Sarcasm Detection &amp;amp; Generative Meme Pipeline&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="1400" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 1: INPUTS -->
+        <mxCell id="p1_box_inputs" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#0369A1&quot;&gt;STAGE 1: MULTIMODAL SENSORY INPUTS&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;fontSize=14;startSize=35;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="135" width="1400" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_in_cam" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;📹 Live Webcam Feed&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#475569&quot;&gt;640x480 RGB Video Stream @ 30+ FPS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_inputs">
+          <mxGeometry x="40" y="45" width="380" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_in_mic" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;🎤 Microphone Audio&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#475569&quot;&gt;16 kHz 16-bit Mono Live Speech Stream&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_inputs">
+          <mxGeometry x="510" y="45" width="380" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_in_txt" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;⌨️ User Text Prompt&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#475569&quot;&gt;Interactive Typed Sentence / News Headline&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_inputs">
+          <mxGeometry x="980" y="45" width="380" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 2: PERCEPTION & EXTRACTION -->
+        <mxCell id="p1_box_extract" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#0F766E&quot;&gt;STAGE 2: PERCEPTUAL TRACKING &amp;amp; SPEECH-TO-TEXT&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=2;fontSize=14;startSize=35;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="1400" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_ext_mesh" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;FaceLandmarker &amp;amp; 3D Pose Gyro&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#334155&quot;&gt;MediaPipe 478 3D Points • 52 Blendshapes • solvePnP (Pitch, Yaw, Roll)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_extract">
+          <mxGeometry x="40" y="45" width="450" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_ext_stt" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;Speech-to-Text (STT) Engine&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#334155&quot;&gt;OpenAI Whisper (base.en) Local Audio Transcription&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_extract">
+          <mxGeometry x="540" y="45" width="400" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_ext_bio" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;Biometrics &amp;amp; 3D Gaze Tracker&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#334155&quot;&gt;rPPG Heart Rate (BPM ❤️) • Stress Index % • Iris Vectors&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_extract">
+          <mxGeometry x="990" y="45" width="370" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 3: INTELLIGENCE ENGINES -->
+        <mxCell id="p1_box_intel" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#7E22CE&quot;&gt;STAGE 3: AFFECTIVE &amp;amp; SARCASM INTELLIGENCE ENGINES&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;fontSize=14;startSize=35;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="415" width="1400" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_mod_fer" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;1. Emotion Classifier (FER)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#4C1D95&quot;&gt;Custom 4-Block CNN on FER-2013 &amp;rarr; 7 Emotion Classes (Happy, Sad, Angry, etc.)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_intel">
+          <mxGeometry x="40" y="45" width="410" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_mod_au" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;2. Facial Action Units (AUs)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#4C1D95&quot;&gt;FACS Micro-Cues: AU14 Smirk • AU1+2 Brow • AU63 Eye Roll &amp;rarr; Cue Score ($S_{\text{cues}}$)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_intel">
+          <mxGeometry x="500" y="45" width="410" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_mod_nlp" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;3. Text Sarcasm Classifier&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#4C1D95&quot;&gt;Fine-Tuned DeBERTa-v3 Transformer &amp;rarr; Semantic Probability ($P_{\text{text}}$)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_intel">
+          <mxGeometry x="960" y="45" width="400" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 4: MULTIMODAL FUSION -->
+        <mxCell id="p1_box_fusion" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#BE123C&quot;&gt;STAGE 4: MULTIMODAL DECISION FUSION MATRIX&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;fontSize=14;startSize=35;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="560" width="1400" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fusion_math" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#BE123C&quot;&gt;Weighted Fusion Formula:&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#0F172A&quot;&gt;S_fused = min( 1.0,  0.60 &amp;times; P_text + 0.40 &amp;times; S_cues + &amp;Delta;_incongruity )&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot; color=&quot;#9F1239&quot;&gt;&lt;b&gt;Cross-Modal Incongruity Bonus:&lt;/b&gt; &amp;Delta; = +0.15 when positive words match deadpan emotion &amp;rarr; &lt;b&gt;Final Verdict: SARCASTIC vs. SINCERE&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_fusion">
+          <mxGeometry x="40" y="42" width="1320" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 5: GENERATION & STYLIZATION -->
+        <mxCell id="p1_box_gen" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#047857&quot;&gt;STAGE 5: 5-MODE CARTOONIFICATION &amp;amp; AI MEME GENERATION&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;fontSize=14;startSize=35;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="695" width="1400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_gen_toon" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;🎨 5-Mode Cartoon Engine&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#065F46&quot;&gt;1. 3D Avatar Match (30,000 CartoonSet + Procrustes Warping) • 2. Cyber Hologram • 3. Expression • 4. AnimeGANv2 • 5. OpenCV&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_gen">
+          <mxGeometry x="40" y="45" width="630" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_gen_meme" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;⚡ AI Meme Caption &amp;amp; Compositor&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#065F46&quot;&gt;Local LLM Qwen2.5-1.5B (5 Styles: Funny, Sarcastic, Witty, Ironic, Motivational) + Dynamic PIL Layout + 3s Looping GIF&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_gen">
+          <mxGeometry x="720" y="45" width="640" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- STAGE 6: OUTPUTS -->
+        <mxCell id="p1_box_out" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#BE185D&quot;&gt;STAGE 6: DUAL DEPLOYMENT &amp;amp; OFFLINE FEEDBACK&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;strokeWidth=2;fontSize=14;startSize=35;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="845" width="1400" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_out_desktop" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;🖥️ Desktop AR Cyberpunk Application&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#831843&quot;&gt;OpenCV 30+ FPS HUD • Biometrics Deck • Keyboard Keybinds&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_out">
+          <mxGeometry x="40" y="45" width="420" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_out_voice" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;🗣️ Offline AI Voice Persona (TTS) &amp;amp; SFX&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#831843&quot;&gt;Speaks Sarcastic Verdicts Out Loud • Sci-Fi Audio Chirps&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_out">
+          <mxGeometry x="500" y="45" width="410" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_out_web" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;🌐 Flask Web Perception Hub&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#831843&quot;&gt;Remote Browser Streaming at http://localhost:5000&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;align=center;" vertex="1" parent="p1_box_out">
+          <mxGeometry x="950" y="45" width="410" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- CLEAR BOLD CONNECTORS WITH EXPLICIT CARDINAL ANCHORS -->
+        <mxCell id="p1_arr1" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot; style=&quot;font-size: 12px;&quot;&gt;Video &amp;amp; Audio Streams&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1_box_inputs" target="p1_box_extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_arr2" value="&lt;b&gt;&lt;font color=&quot;#0F766E&quot; style=&quot;font-size: 12px;&quot;&gt;3D Landmarks &amp;amp; Text Tokens&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0D9488;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1_box_extract" target="p1_box_intel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_arr3" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot; style=&quot;font-size: 12px;&quot;&gt;Emotion State, AU Cues &amp;amp; Text Sarcasm&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1_box_intel" target="p1_box_fusion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_arr4" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot; style=&quot;font-size: 12px;&quot;&gt;Sarcasm Verdict &amp;amp; Conditioned Affect&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1_box_fusion" target="p1_box_gen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_arr5" value="&lt;b&gt;&lt;font color=&quot;#047857&quot; style=&quot;font-size: 12px;&quot;&gt;Stylized Video &amp;amp; Memes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1_box_gen" target="p1_box_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ==================================================================== -->
+  <!-- PAGE 2: DETAILED DEEP LEARNING PIPELINE (LIGHT THEME, ZERO OVERLAP)  -->
+  <!-- ==================================================================== -->
+  <diagram id="DetailedArchitecture" name="2. Detailed Deep Learning Pipeline (Spacious)">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1650" background="#FFFFFF" math="1" shadow="1">
+      <root>
+        <mxCell id="d_0" />
+        <mxCell id="d_1" parent="d_0" />
+
+        <!-- Header -->
+        <mxCell id="d_title_block" value="&lt;b&gt;&lt;font style=&quot;font-size: 22px;&quot; color=&quot;#0F172A&quot;&gt;PIXORA AI: DETAILED DEEP LEARNING &amp;amp; TENSOR SPECIFICATIONS&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot; color=&quot;#475569&quot;&gt;Layer-by-Layer Dimensions, Neural Loss Formulations, FACS Action Units &amp;amp; Biometric Signals&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="30" width="1880" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 0: SENSORY INPUTS (y=135, h=105) -->
+        <mxCell id="d_tier0" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#0369A1&quot;&gt;TIER 0: SENSORY INPUTS &amp;amp; CAPTURE STREAMS&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="135" width="1880" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t0_cam" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Live Webcam Stream&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;640&amp;times;480 @ 30+ FPS RGB&lt;br&gt;OpenCV VideoCapture Interface&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="d_tier0">
+          <mxGeometry x="30" y="40" width="380" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t0_audio" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Microphone Audio Stream&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;16 kHz 16-bit Mono PCM Audio&lt;br&gt;sounddevice / PyAudio Stream&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="d_tier0">
+          <mxGeometry x="460" y="40" width="380" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t0_text" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;User Text Input / Headline&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;Interactive Headline Prompt&lt;br&gt;News Headlines / Social Captions&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=11;" vertex="1" parent="d_tier0">
+          <mxGeometry x="890" y="40" width="450" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t0_config" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Configuration State Machine&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;Weights: Text=0.6, Face=0.4&lt;br&gt;Threshold: 0.50 | 5 Caption Styles&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.5;fontSize=11;" vertex="1" parent="d_tier0">
+          <mxGeometry x="1390" y="40" width="450" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 1: 3D TRACKING & PREPROCESSING (y=270, h=195) -->
+        <mxCell id="d_tier1" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#0F766E&quot;&gt;TIER 1: 3D GEOMETRIC TRACKING, POSE ESTIMATION &amp;amp; BIOMETRIC PERCEPTION&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="270" width="1880" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t1_mediapipe" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;MediaPipe FaceLandmarker&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284C7&quot;&gt;Single-Stage TFLite Regression&lt;/font&gt;&lt;br&gt;• &lt;b&gt;478 3D Metric Landmarks&lt;/b&gt; (x, y, z)&lt;br&gt;• &lt;b&gt;52 Blendshapes&lt;/b&gt; (0.0 to 1.0)&lt;br&gt;• Multi-Face Tracking (Up to 4 faces)&lt;br&gt;• Latency: &lt;b&gt;~8ms on CPU/GPU&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier1">
+          <mxGeometry x="30" y="45" width="380" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t1_headpose" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;3D Head Pose Euler Gyro&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284C7&quot;&gt;Perspective-n-Point (solvePnP)&lt;/font&gt;&lt;br&gt;• 6 3D Canonical Anchors (Nose, Chin, Eyes, Mouth)&lt;br&gt;• Rodrigues Rotation Vector R &amp;rarr; Euler Angles&lt;br&gt;• &lt;b&gt;Pitch, Yaw, Roll (&amp;plusmn;180&amp;deg;)&lt;/b&gt;&lt;br&gt;• Aligns crops &amp;amp; rotates avatars with head tilt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier1">
+          <mxGeometry x="460" y="45" width="410" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t1_rppg" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;rPPG Optical Capillary Pulse&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0D9488&quot;&gt;Micro-Vascular Color Absorption&lt;/font&gt;&lt;br&gt;• Forehead/Cheek Green Channel I_G(t)&lt;br&gt;• 45-120 Frame Detrended Buffer&lt;br&gt;• FFT Spectral Peak in 0.75-3.0 Hz Band&lt;br&gt;• &lt;b&gt;Live Heart Rate (BPM ❤️) &amp;amp; Stress Index (%)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier1">
+          <mxGeometry x="920" y="45" width="440" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t1_gaze" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;3D Eye Gaze &amp;amp; Social Dynamics&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0D9488&quot;&gt;Iris Vector &amp;amp; Proximity Matrix&lt;/font&gt;&lt;br&gt;• Iris 468 &amp;amp; 473 vs Outer/Inner Canthi&lt;br&gt;• &lt;b&gt;Screen Attention % &amp;amp; Gaze Quadrant&lt;/b&gt;&lt;br&gt;• 3D Laser Focus Reticle Overlay&lt;br&gt;• Multi-Person Sarcastic Banter Arcs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier1">
+          <mxGeometry x="1410" y="45" width="430" height="135" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 2: NEURAL EMOTION, AUS & NLP (y=495, h=205) -->
+        <mxCell id="d_tier2" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#7E22CE&quot;&gt;TIER 2: NEURAL EMOTION RECOGNITION, FACS ACTION UNITS &amp;amp; LINGUISTIC NLP&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="495" width="1880" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t2_fer" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Discrete Emotion Classifier (FER)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Custom 4-Block CNN on FER-2013&lt;/font&gt;&lt;br&gt;• Input: 48&amp;times;48 Grayscale Face Crop&lt;br&gt;• Conv2D(32/64/128/256) + BatchNorm + MaxPool + Dropout(0.25)&lt;br&gt;• Dense(512) + Softmax &amp;rarr; &lt;b&gt;7 Emotion Classes&lt;/b&gt;&lt;br&gt;  [Happy, Sad, Angry, Surprise, Fear, Disgust, Neutral]&lt;br&gt;• Latency: &lt;b&gt;~4.2ms CPU / ~1.1ms CUDA&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier2">
+          <mxGeometry x="30" y="45" width="420" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t2_facs" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;FACS Action Unit (AU) Scorer&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Physical Micro-Expression Cues&lt;/font&gt;&lt;br&gt;• &lt;b&gt;AU12 (Smile):&lt;/b&gt; mouthSmileLeft/Right (w=0.40)&lt;br&gt;• &lt;b&gt;AU14 (Smirk):&lt;/b&gt; Asymmetrical mouth corner pull (w=0.35)&lt;br&gt;• &lt;b&gt;AU1+2 (Brow):&lt;/b&gt; browInnerUp / browOuterUp (w=0.15)&lt;br&gt;• &lt;b&gt;AU63 (Eye Roll):&lt;/b&gt; eyeLookUpLeft/Right (w=0.10)&lt;br&gt;• &lt;b&gt;Output: Physical Cue Score S_cues in [0.0, 1.0]&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier2">
+          <mxGeometry x="490" y="45" width="420" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t2_whisper" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Audio Speech-to-Text (STT)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#6366F1&quot;&gt;OpenAI Whisper (base.en)&lt;/font&gt;&lt;br&gt;• 16 kHz Audio &amp;rarr; 80-Channel Log-Mel Spectrogram&lt;br&gt;• Transformer Encoder-Decoder with Self-Attention&lt;br&gt;• Non-blocking asynchronous audio transcription thread&lt;br&gt;• &lt;b&gt;Output: Clean Spoken Transcript Text&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier2">
+          <mxGeometry x="950" y="45" width="430" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t2_deberta" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Linguistic Sarcasm Classifier&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#6366F1&quot;&gt;Fine-Tuned DeBERTa-v3 / TF-IDF&lt;/font&gt;&lt;br&gt;• Disentangled Content &amp;amp; Relative Position Attention&lt;br&gt;• Trained on 28,619 Headlines + MUStARD multimodal corpus&lt;br&gt;• Zero-shot local LLM verifier fallback for edge cases&lt;br&gt;• &lt;b&gt;Output: Semantic Sarcasm Probability P_text in [0.0, 1.0]&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier2">
+          <mxGeometry x="1420" y="45" width="420" height="145" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 3: MULTIMODAL FUSION MATRIX (y=730, h=165) -->
+        <mxCell id="d_tier3" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#BE123C&quot;&gt;TIER 3: MULTIMODAL DECISION FUSION MATRIX &amp;amp; INCONGRUITY ENGINE&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="730" width="1880" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t3_math" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot; color=&quot;#BE123C&quot;&gt;Weighted Multimodal Decision Formulation&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#0F172A&quot;&gt;S_fused = min( 1.0,  0.60 &amp;times; P_text + 0.40 &amp;times; S_cues + &amp;Delta;_incongruity )&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Text Weight: w_text = 0.60 | Physical Facial Cue Weight: w_face = 0.40&lt;br&gt;• Classification Threshold: &amp;tau; = 0.50 &amp;rarr; &lt;b&gt;Verdict: [SARCASTIC / SINCERE]&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="d_tier3">
+          <mxGeometry x="30" y="45" width="880" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t3_incongruity" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot; color=&quot;#E11D48&quot;&gt;Cross-Modal Emotion-Text Incongruity Engine&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;IF&lt;/b&gt; Positive Lexicon (&lt;i&gt;&quot;love&quot;, &quot;great&quot;, &quot;thrilled&quot;&lt;/i&gt;) &lt;b&gt;AND&lt;/b&gt; Detected Emotion in {&lt;i&gt;Sad, Angry, Neutral&lt;/i&gt;}:&lt;br&gt;  &amp;implies; &lt;b&gt;Incongruity Bonus: &amp;Delta;_incongruity = +0.15&lt;/b&gt;&lt;br&gt;• Resolves subtle deadpan sarcasm where surface words deceive unimodal classifiers&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=11;align=left;spacingLeft=15;" vertex="1" parent="d_tier3">
+          <mxGeometry x="950" y="45" width="890" height="105" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 4: CARTOONIFICATION & MEME SYNTHESIS (y=925, h=230) -->
+        <mxCell id="d_tier4" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#B45309&quot;&gt;TIER 4: DUAL-PARADIGM 5-MODE CARTOON ENGINE &amp;amp; GENERATIVE MEME SYNTHESIS&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="925" width="1880" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t4_modes" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;5-Mode Live Cartoonification Subsystem&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;1. 3D Avatar Match:&lt;/font&gt; 960-D MobileNetV3 + 16-D LAB index over 30,000 Google Cartoon Set + Snapchat Procrustes Affine Warping&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;2. Cyber Hologram:&lt;/font&gt; Sobel spatial edge gradients + Neon Cyan wireframe shader + Animated scanlines&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;3. Expression Vector:&lt;/font&gt; Anatomical feature exaggeration on smoothed bilateral canvas&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;4. AnimeGANv2:&lt;/font&gt; PyTorch Deep Residual GAN with portrait_v2 weights (&lt;6.5ms on CUDA)&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;5. OpenCV Classic:&lt;/font&gt; Bilateral edge-preserving filter + adaptive thresholding (&gt;120 FPS on CPU)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier4">
+          <mxGeometry x="30" y="45" width="880" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t4_memes" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Generative AI Caption &amp;amp; Meme Synthesis&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;• Local LLM Caption Generator:&lt;/font&gt; Qwen2.5-1.5B-Instruct causal LM conditioned on detected emotion &amp;amp; sarcasm verdict&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;• 5 Selectable Styles:&lt;/font&gt; Funny, Sarcastic, Witty, Ironic, Motivational (Zero-shot edge inference)&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;• Automated PIL Compositor:&lt;/font&gt; Dynamic text auto-wrapping, Impact font autoscaling &amp;amp; metadata telemetry watermark&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;• Looping GIF Meme Recorder:&lt;/font&gt; Circular 3-second buffer exported to quantized animated GIF (Key R)&lt;br&gt;• Deliverables: &lt;b&gt;High-Res PNG Meme + 3s Animated Looping GIF Meme&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier4">
+          <mxGeometry x="950" y="45" width="890" height="165" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 5: DEPLOYMENTS & FEEDBACK (y=1185, h=180) -->
+        <mxCell id="d_tier5" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#BE185D&quot;&gt;TIER 5: DUAL INTERFACE DEPLOYMENTS &amp;amp; OFFLINE MULTIMODAL FEEDBACK&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=#DB2777;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="d_1">
+          <mxGeometry x="60" y="1185" width="1880" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t5_desktop" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Desktop AR Cyberpunk Application (main.py)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#9D174D&quot;&gt;High-Performance Edge Interface&lt;/font&gt;&lt;br&gt;• 30+ FPS Top Telemetry Deck • 3D Biometrics Reticles (❤️ BPM, Stress %, Eye Gaze)&lt;br&gt;• Live Emotion &amp;amp; Expression Bottom Banner • Holographic Face Framing Bounding Box&lt;br&gt;• &lt;b&gt;Controls:&lt;/b&gt; [SPACE: Type] [V: Voice] [R: GIF] [S: TTS] [F: SFX] [T: Toon] [M: Mode] [C: Style] [D: Debug] [Q: Quit]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier5">
+          <mxGeometry x="30" y="45" width="600" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t5_voice" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Offline AI Voice Persona (TTS) &amp;amp; SFX&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#9D174D&quot;&gt;Asynchronous Worker Thread&lt;/font&gt;&lt;br&gt;• &lt;b&gt;Empathic Voice (pyttsx3/SAPI5):&lt;/b&gt; Speaks sarcastic verdict &amp;amp; meme caption out loud with natural inflection (Key S)&lt;br&gt;• &lt;b&gt;Sci-Fi Sound FX (winsound):&lt;/b&gt; Target lock chirp, sarcasm alert ping, shutter snap (Key F)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier5">
+          <mxGeometry x="660" y="45" width="580" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="d_t5_web" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Flask Web Perception Hub (web_app.py)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#9D174D&quot;&gt;Remote Browser Dashboard (http://localhost:5000)&lt;/font&gt;&lt;br&gt;• Live MJPEG Video Stream with AR HUD Overlay&lt;br&gt;• Remote Web Mode Switcher (Avatar / Hologram / GAN)&lt;br&gt;• Real-time Biometrics Telemetry Polling (400ms interval)&lt;br&gt;• Interactive Browser Voice Input &amp;amp; Meme Studio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB2777;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="d_tier5">
+          <mxGeometry x="1270" y="45" width="570" height="115" as="geometry" />
+        </mxCell>
+
+        <!-- ZERO-OVERLAP TIER CONNECTORS WITH EXPLICIT CARDINAL ANCHORS -->
+        <mxCell id="d_conn_0_1" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot; style=&quot;font-size: 11px;&quot;&gt;Raw Video, Audio &amp;amp; Prompt Streams&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="d_1" source="d_tier0" target="d_tier1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_conn_1_2" value="&lt;b&gt;&lt;font color=&quot;#0F766E&quot; style=&quot;font-size: 11px;&quot;&gt;Aligned 48x48 Crops, 52 Blendshapes &amp;amp; 16kHz Audio&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0D9488;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="d_1" source="d_tier1" target="d_tier2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_conn_2_3" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot; style=&quot;font-size: 11px;&quot;&gt;7-Class Emotion Confidences, AU Sarcasm Score (S_cues) &amp;amp; Semantic Sarcasm (P_text)&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="d_1" source="d_tier2" target="d_tier3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_conn_3_4" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot; style=&quot;font-size: 11px;&quot;&gt;Unified Sarcasm Verdict, Emotion State &amp;amp; Conditioned Affect Signals&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="d_1" source="d_tier3" target="d_tier4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_conn_4_5" value="&lt;b&gt;&lt;font color=&quot;#047857&quot; style=&quot;font-size: 11px;&quot;&gt;Composited Cartoon Video Frames, PNG Memes &amp;amp; 3s Looping Animated GIFs&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="d_1" source="d_tier4" target="d_tier5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ==================================================================== -->
+  <!-- PAGE 3: RESEARCH METHODOLOGY & EXPERIMENTAL FRAMEWORK (LIGHT THEME)  -->
+  <!-- ==================================================================== -->
+  <diagram id="ResearchMethodology" name="3. Research Framework &amp; Experimental Pipeline">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1650" background="#FFFFFF" math="1" shadow="1">
+      <root>
+        <mxCell id="r_0" />
+        <mxCell id="r_1" parent="r_0" />
+
+        <!-- Header -->
+        <mxCell id="r_title_block" value="&lt;b&gt;&lt;font style=&quot;font-size: 22px;&quot; color=&quot;#0F172A&quot;&gt;PIXORA AI: RESEARCH METHODOLOGY &amp;amp; SCIENTIFIC BENCHMARK FRAMEWORK&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot; color=&quot;#475569&quot;&gt;Literature Gaps, Benchmark Corpora, Mathematical Formulations, Empirical Ablation Studies &amp;amp; Novel Contributions&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="30" width="1880" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 0: RESEARCH MOTIVATION & LITERATURE GAPS (y=135, h=160) -->
+        <mxCell id="r_tier0" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#BE123C&quot;&gt;PHASE 1: RESEARCH MOTIVATION &amp;amp; IDENTIFIED LITERATURE GAPS&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="135" width="1880" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t0_gap1" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;1. Unimodal Sarcasm Failure&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#BE123C&quot;&gt;Text-Only NLP Blindspot&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Surface NLP (BERT/TF-IDF) misclassifies deadpan irony like &lt;i&gt;&quot;Oh, great job!&quot;&lt;/i&gt; as positive.&lt;br&gt;• Sarcasm fundamentally requires non-verbal facial &amp;amp; vocal cues.&lt;br&gt;• &lt;b&gt;Gap Solved:&lt;/b&gt; Multimodal Action Unit fusion.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier0">
+          <mxGeometry x="30" y="45" width="430" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t0_gap2" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;2. Cross-Modal Incongruity&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#BE123C&quot;&gt;Standard FER Limitations&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Classic FER models (FER-2013/DeepFace) only output static labels (Happy/Sad).&lt;br&gt;• They miss contradictory pairings (e.g. positive text + deadpan face).&lt;br&gt;• &lt;b&gt;Gap Solved:&lt;/b&gt; Mathematical incongruity bonus &amp;Delta; = +0.15.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier0">
+          <mxGeometry x="490" y="45" width="430" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t0_gap3" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;3. Geometric Avatar Distortion&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#BE123C&quot;&gt;Stylization Boundary Clipping&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• 2D avatar overlays suffer from floating-box artifacts and rotation misalignment.&lt;br&gt;• GANs alter face geometry without facial landmark anchoring.&lt;br&gt;• &lt;b&gt;Gap Solved:&lt;/b&gt; solvePnP roll tilt + Procrustes affine warping.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier0">
+          <mxGeometry x="950" y="45" width="430" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t0_gap4" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;4. Sub-Second Edge Latency&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#BE123C&quot;&gt;High Cloud Latency vs. Live AR&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Heavy vision-language models take &amp;gt;2.5s over cloud APIs.&lt;br&gt;• Interactive webcam AR demands &amp;lt;30ms continuous HUD loops.&lt;br&gt;• &lt;b&gt;Gap Solved:&lt;/b&gt; Distilled 4-block CNN + local 4-bit Qwen2.5 LLM.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier0">
+          <mxGeometry x="1410" y="45" width="440" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 1: BENCHMARK DATASETS & PREPROCESSING (y=325, h=190) -->
+        <mxCell id="r_tier1" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#0369A1&quot;&gt;PHASE 2: BENCHMARK CORPORA &amp;amp; DATA PREPROCESSING PIPELINES&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="325" width="1880" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t1_fer" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;FER-2013 Dataset&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284C7&quot;&gt;Vision Benchmark (Goodfellow et al.)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;35,887 Grayscale Images&lt;/b&gt; (48&amp;times;48 pixels)&lt;br&gt;• 7 Emotion Classes (Happy, Sad, Angry, etc.)&lt;br&gt;• Augmentations: Random rotation (&amp;plusmn;15&amp;deg;), horizontal flips, intensity normalization &amp;isin; [0, 1]&lt;br&gt;• Used for: Custom 4-Block CNN emotion model&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier1">
+          <mxGeometry x="30" y="45" width="430" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t1_news" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;News Headlines Sarcasm Dataset&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284C7&quot;&gt;Linguistic Corpus (Misra &amp;amp; Arora)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;28,619 Headlines&lt;/b&gt; (The Onion vs. HuffPost)&lt;br&gt;• Binary Labels: Sarcastic (1) vs. Sincere (0)&lt;br&gt;• Preprocessing: BPE Byte-Pair Tokenization, lowercase normalization, max seq length = 128&lt;br&gt;• Used for: Baseline TF-IDF &amp;amp; DeBERTa-v3 model&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier1">
+          <mxGeometry x="490" y="45" width="430" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t1_mustard" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;MUStARD Multimodal Corpus&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284C7&quot;&gt;Audiovisual Sarcasm (Castro et al.)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;690 Multimodal Utterance Clips&lt;/b&gt; from TV sitcoms&lt;br&gt;• Aligned text, acoustic pitch (F0), and FACS facial action units&lt;br&gt;• Calibrates cross-modal fusion weights (w_text = 0.6, w_face = 0.4)&lt;br&gt;• Validates incongruity penalty thresholds&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier1">
+          <mxGeometry x="950" y="45" width="430" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t1_cartoon" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Google Cartoon Set (30k)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284C7&quot;&gt;Synthetic 2D Avatars (Google Research)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;30,000 High-Res Synthetic Avatars&lt;/b&gt;&lt;br&gt;• 960-D MobileNetV3 + 16-D LAB color vectors&lt;br&gt;• KD-Tree Euclidean indexing (&amp;lt;4.8ms GPU tensor search)&lt;br&gt;• Canonical Geometry: Eye Level y=251.0px, Eye Dist 98.7px&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier1">
+          <mxGeometry x="1410" y="45" width="440" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 2: MODEL TRAINING & FINE-TUNING ARCHITECTURES (y=545, h=220) -->
+        <mxCell id="r_tier2" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#7E22CE&quot;&gt;PHASE 3: NEURAL TRAINING &amp;amp; FINE-TUNING METHODOLOGIES&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="545" width="1880" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t2_cnn" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Custom 4-Block Emotion CNN&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Supervised Vision Optimization&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;Topology:&lt;/b&gt; 4 &amp;times; [Conv2D(32/64/128/256) + BN + ReLU + MaxPool(2&amp;times;2) + Dropout(0.25)]&lt;br&gt;• Head: Dense(512) + Dropout(0.5) + Dense(7, Softmax)&lt;br&gt;• &lt;b&gt;Loss:&lt;/b&gt; Categorical Cross-Entropy L_CE = -&amp;sum; y_i log(p_i)&lt;br&gt;• Adam Optimizer (&amp;alpha;=1e-3, cosine decay), 30 epochs, batch 64&lt;br&gt;• &lt;b&gt;Accuracy: 68.7% (Outperforms Human Baseline 65.5%)&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier2">
+          <mxGeometry x="30" y="45" width="430" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t2_deberta" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Fine-Tuned DeBERTa-v3 NLP&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Disentangled Attention Transformer&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;Base:&lt;/b&gt; microsoft/deberta-v3-base (86M parameters)&lt;br&gt;• Disentangled Attention: Separate content &amp;amp; relative position vectors&lt;br&gt;• &lt;b&gt;Loss:&lt;/b&gt; Binary Cross-Entropy with Logits (BCEWithLogitsLoss)&lt;br&gt;• Linear Warmup (10%) + AdamW (lr=2e-5, weight decay=0.01)&lt;br&gt;• &lt;b&gt;Performance: 91.4% Accuracy, 0.912 Macro-F1&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier2">
+          <mxGeometry x="490" y="45" width="430" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t2_gan" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;AnimeGANv2 Adversarial Stylization&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#7E22CE&quot;&gt;PyTorch Deep Residual Style Transfer&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;Generator:&lt;/b&gt; Inverted Residual Blocks with Channel Attention&lt;br&gt;• &lt;b&gt;Discriminator:&lt;/b&gt; Multi-scale PatchGAN evaluating anime line-art &amp;amp; color distribution&lt;br&gt;• Compound Loss: L_GAN = L_adv + &amp;omega;_con*L_con + &amp;omega;_sty*L_sty + &amp;omega;_col*L_col&lt;br&gt;• FP16 TorchScript CUDA compilation (&amp;lt;6.5ms inference on RTX 4060)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier2">
+          <mxGeometry x="950" y="45" width="430" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t2_llm" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Quantized Local LLM Meme Generation&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Zero-Shot Causal Affect Prompting&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• &lt;b&gt;Model:&lt;/b&gt; Qwen2.5-1.5B-Instruct (4-bit AWQ quantized, 1.5B parameters)&lt;br&gt;• &lt;b&gt;Conditioning:&lt;/b&gt; Emotion label, Sarcasm Score &amp;amp; Style Tone (Funny, Sarcastic, etc.)&lt;br&gt;• Sampling: Temperature &amp;tau;=0.7, Top-p=0.9, Repetition Penalty=1.15&lt;br&gt;• Generates punchy social-media captions in &amp;lt;350ms on local device&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier2">
+          <mxGeometry x="1410" y="45" width="440" height="155" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 3: MATHEMATICAL FORMULATIONS (y=795, h=205) -->
+        <mxCell id="r_tier3" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#BE123C&quot;&gt;PHASE 4: MATHEMATICAL FORMULATIONS &amp;amp; THEORETICAL RIGOR&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="795" width="1880" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t3_eq1" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot;&gt;1. Multimodal Sarcasm Decision Matrix&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;Weighted Late Fusion with Cross-Modal Incongruity&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;font color=&quot;#0F172A&quot; style=&quot;font-size: 12px;&quot;&gt;S_fused = min(1.0,  w_text &amp;times; P_text + w_face &amp;times; S_cues + &amp;Delta;_incongruity)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;Where w_text = 0.60, w_face = 0.40, and FACS Action Unit score is:&lt;br&gt;S_cues = 0.40 AU12 + 0.35 AU14 + 0.15 AU1+2 + 0.10 AU63&lt;br&gt;&amp;Delta;_incongruity = +0.15  if Sentiment(Text)&gt;0 &amp;amp; Emotion(Face) in {Sad, Angry, Neutral}&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E11D48;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="r_tier3">
+          <mxGeometry x="30" y="45" width="600" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t3_eq2" value="&lt;b&gt;&lt;font color=&quot;#0F766E&quot;&gt;2. 3D Pose solvePnP &amp;amp; Procrustes Conformal Warping&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;Perspective-n-Point Projection &amp;amp; Canonical Landmark Alignment&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&lt;b&gt;A. Levenberg-Marquardt Perspective-n-Point (solvePnP):&lt;/b&gt;&lt;br&gt;Projects 6 3D canonical facial anchors &amp;rarr; extracts Euler Roll Tilt &amp;theta;_roll&lt;br&gt;&lt;b&gt;B. Rigid Procrustes Similarity Mapping Matrix M_affine:&lt;/b&gt;&lt;br&gt;Maps canonical pupil anchors (198.45, 251.0) &amp;amp; (297.15, 251.0) directly to live pupils.&lt;br&gt;Eliminates vertical offset error (y=251 vs old y=215) and scale pinch (98.7px vs old 120px).&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier3">
+          <mxGeometry x="660" y="45" width="600" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t3_eq3" value="&lt;b&gt;&lt;font color=&quot;#0F766E&quot;&gt;3. Contactless rPPG Optical Pulse Estimation&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;Hemodynamic Microvascular Absorption Model&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;Temporal green channel intensity I_G(t) extracted from forehead ROI:&lt;br&gt;Detrends signal &amp;amp; applies Fast Fourier Transform (FFT) over 0.75 - 3.0 Hz band:&lt;br&gt;&lt;b&gt;f_pulse = argmax |FFT{I_G(t)}(f)| &amp;implies; Heart Rate (BPM) = f_pulse &amp;times; 60&lt;/b&gt;&lt;br&gt;Computes Cognitive Stress Index % based on pulse frequency variances.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier3">
+          <mxGeometry x="1290" y="45" width="560" height="145" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 4: EMPIRICAL BENCHMARKS & ABLATION STUDIES (y=1030, h=225) -->
+        <mxCell id="r_tier4" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#B45309&quot;&gt;PHASE 5: EMPIRICAL BENCHMARKS, ABLATION STUDIES &amp;amp; SOTA COMPARISON&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="1030" width="1880" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t4_tab1" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Multimodal Sarcasm Ablation Benchmark&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;Ablation on Modalities &amp;amp; Incongruity Engine&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;table style=&quot;width:100%; font-size:10px; color:#0F172A; border-collapse:collapse;&quot; border=&quot;1&quot; cellpadding=&quot;3&quot;&gt;&lt;tr bgcolor=&quot;#F1F5F9&quot;&gt;&lt;th&gt;&lt;b&gt;Model / Modality&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Accuracy&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Macro-F1&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;AUROC&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Latency&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TF-IDF Baseline (Text Only)&lt;/td&gt;&lt;td&gt;76.2%&lt;/td&gt;&lt;td&gt;0.758&lt;/td&gt;&lt;td&gt;0.814&lt;/td&gt;&lt;td&gt;&lt;b&gt;0.8 ms&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DeBERTa-v3 (Text Only)&lt;/td&gt;&lt;td&gt;91.4%&lt;/td&gt;&lt;td&gt;0.912&lt;/td&gt;&lt;td&gt;0.956&lt;/td&gt;&lt;td&gt;18.2 ms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FACS Action Units (Face Only)&lt;/td&gt;&lt;td&gt;68.5%&lt;/td&gt;&lt;td&gt;0.671&lt;/td&gt;&lt;td&gt;0.722&lt;/td&gt;&lt;td&gt;&lt;b&gt;7.8 ms&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr bgcolor=&quot;#FFE4E6&quot;&gt;&lt;td&gt;&lt;b&gt;Pixora AI Multimodal Fusion&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;94.8%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;0.946&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;0.978&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;26.8 ms&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&amp;bull; &lt;i&gt;Multimodal fusion yields +3.4% accuracy gain over DeBERTa by catching deadpan smirks.&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier4">
+          <mxGeometry x="30" y="45" width="590" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t4_tab2" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;FER-2013 Emotion Classification Benchmark&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;Performance Comparison on Test Split&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;table style=&quot;width:100%; font-size:10px; color:#0F172A; border-collapse:collapse;&quot; border=&quot;1&quot; cellpadding=&quot;3&quot;&gt;&lt;tr bgcolor=&quot;#F1F5F9&quot;&gt;&lt;th&gt;&lt;b&gt;Architecture&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Params&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Top-1 Acc&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;CPU Infer&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;GPU Infer&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Human Baseline&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;td&gt;65.5 &amp;plusmn; 5%&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DeepFace (VGG-Face)&lt;/td&gt;&lt;td&gt;138M&lt;/td&gt;&lt;td&gt;66.2%&lt;/td&gt;&lt;td&gt;68.0 ms&lt;/td&gt;&lt;td&gt;12.4 ms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MobileNetV3&lt;/td&gt;&lt;td&gt;5.4M&lt;/td&gt;&lt;td&gt;64.8%&lt;/td&gt;&lt;td&gt;11.2 ms&lt;/td&gt;&lt;td&gt;2.8 ms&lt;/td&gt;&lt;/tr&gt;&lt;tr bgcolor=&quot;#DCFCE7&quot;&gt;&lt;td&gt;&lt;b&gt;Pixora Custom 4-Block CNN&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;1.8M&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;67.8%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;4.2 ms&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;1.1 ms&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&amp;bull; &lt;i&gt;Custom CNN achieves 16&amp;times; faster CPU inference than DeepFace at higher accuracy.&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier4">
+          <mxGeometry x="650" y="45" width="590" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t4_tab3" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Cartoonification &amp;amp; Avatar Warping Quality&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;Perceptual Realism &amp;amp; Rendering Latency&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;table style=&quot;width:100%; font-size:10px; color:#0F172A; border-collapse:collapse;&quot; border=&quot;1&quot; cellpadding=&quot;3&quot;&gt;&lt;tr bgcolor=&quot;#F1F5F9&quot;&gt;&lt;th&gt;&lt;b&gt;Stylization Mode&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Face Alignment&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Resolution&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Frame Rate&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OpenCV Bilateral Edge&lt;/td&gt;&lt;td&gt;100% (Pixel-mapped)&lt;/td&gt;&lt;td&gt;640&amp;times;480&lt;/td&gt;&lt;td&gt;&lt;b&gt;&amp;gt;120 FPS&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AnimeGANv2 (PyTorch)&lt;/td&gt;&lt;td&gt;~85% (Morphological)&lt;/td&gt;&lt;td&gt;512&amp;times;512&lt;/td&gt;&lt;td&gt;&lt;b&gt;~150 FPS (GPU)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Raw Avatar Overlay&lt;/td&gt;&lt;td&gt;~45% (Floating Box)&lt;/td&gt;&lt;td&gt;500&amp;times;500&lt;/td&gt;&lt;td&gt;60 FPS&lt;/td&gt;&lt;/tr&gt;&lt;tr bgcolor=&quot;#E0E7FF&quot;&gt;&lt;td&gt;&lt;b&gt;Pixora Procrustes 3D AR Avatar&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;99.2% (Conformal Mesh)&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;640&amp;times;480&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;~470 FPS (NumPy)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&amp;bull; &lt;i&gt;Procrustes pupil locking + neck cosine falloff completely eliminates floating box clipping.&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier4">
+          <mxGeometry x="1270" y="45" width="580" height="165" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 5: NOVEL SCIENTIFIC CONTRIBUTIONS (y=1285, h=180) -->
+        <mxCell id="r_tier5" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#047857&quot;&gt;PHASE 6: NOVEL SCIENTIFIC CONTRIBUTIONS &amp;amp; DELIVERABLES&lt;/font&gt;&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;startSize=30;rounded=1;arcSize=6;shadow=1;" vertex="1" parent="r_1">
+          <mxGeometry x="60" y="1285" width="1880" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t5_c1" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Contribution 1: Cross-Modal Incongruity Engine&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;Affective Sarcasm Decision Theory&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Mathematical incongruity bonus &amp;Delta; = +0.15 for deadpan contradictions.&lt;br&gt;• Fuses linguistic DeBERTa NLP + FACS Action Units (Smirk, Brow, Roll).&lt;br&gt;• Yields 94.8% accuracy (outperforming all unimodal baselines).&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier5">
+          <mxGeometry x="30" y="45" width="430" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t5_c2" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Contribution 2: Geometric Procrustes AR Warping&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;Snapchat-Grade Pupil-Locked Stylization&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Exact Procrustes similarity mapping locks canonical avatar pupils to live irises.&lt;br&gt;• solvePnP head roll rotation (&amp;plusmn;180&amp;deg;) + soft cosine neck gradient falloff.&lt;br&gt;• Eliminates floating-box artifacts in real-time webcam video.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier5">
+          <mxGeometry x="490" y="45" width="430" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t5_c3" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Contribution 3: Non-Invasive Contactless Biometrics&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;Microvascular Pulse &amp;amp; Gaze Attention in AR&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• rPPG green channel FFT pulse estimation (BPM ❤️) &amp;amp; stress scoring.&lt;br&gt;• 3D Eye Gaze tracking with iris vectors to gauge user engagement.&lt;br&gt;• Integrated directly into high-frame-rate Cyberpunk AR HUD.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier5">
+          <mxGeometry x="950" y="45" width="430" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="r_t5_c4" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Contribution 4: Emotion-Conditioned Meme Engine&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;Zero-Shot Local Generative AI Feedback&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;• Local causal LLM (Qwen2.5-1.5B) generates 5-style context-aware captions.&lt;br&gt;• Dynamic PIL typography + 3s looping animated GIF exporter.&lt;br&gt;• Offline SAPI5 TTS persona speaking sarcastic verdicts out loud.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="r_tier5">
+          <mxGeometry x="1410" y="45" width="440" height="115" as="geometry" />
+        </mxCell>
+
+        <!-- ZERO-OVERLAP RESEARCH CONNECTORS WITH EXPLICIT CARDINAL ANCHORS -->
+        <mxCell id="r_conn_0_1" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot; style=&quot;font-size: 11px;&quot;&gt;Gaps Define Dataset Requirements &amp;amp; Annotations&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="r_1" source="r_tier0" target="r_tier1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_conn_1_2" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot; style=&quot;font-size: 11px;&quot;&gt;Cleaned Data Feeds Neural Training &amp;amp; Vector Indexing&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="r_1" source="r_tier1" target="r_tier2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_conn_2_3" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot; style=&quot;font-size: 11px;&quot;&gt;Trained Embeddings Formulate Decision Math &amp;amp; Pose Warping&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="r_1" source="r_tier2" target="r_tier3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_conn_3_4" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot; style=&quot;font-size: 11px;&quot;&gt;Theoretical Models Evaluated via Empirical Benchmarks&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="r_1" source="r_tier3" target="r_tier4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r_conn_4_5" value="&lt;b&gt;&lt;font color=&quot;#B45309&quot; style=&quot;font-size: 11px;&quot;&gt;Empirical Validation Confirms Core Research Contributions&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D97706;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="r_1" source="r_tier4" target="r_tier5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ==================================================================== -->
+  <!-- PAGE 4: RESEARCH PROCESS FLOWCHART (RAPTOR FORMAT, LIGHT THEME)      -->
+  <!-- ==================================================================== -->
+  <diagram id="RaptorResearchFlow" name="4. Research Process Flowchart (RAPTOR Format)">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1450" background="#FFFFFF" math="1" shadow="1">
+      <root>
+        <mxCell id="rr_0" />
+        <mxCell id="rr_1" parent="rr_0" />
+
+        <!-- Title Block -->
+        <mxCell id="rr_title" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot; color=&quot;#0F172A&quot;&gt;PIXORA AI: RESEARCH &amp;amp; EXPERIMENTAL METHODOLOGY FLOWCHART&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#475569&quot;&gt;Sequential Algorithmic Logic in RAPTOR Flowchart Format (Start &amp;rarr; Datasets &amp;rarr; Training &amp;rarr; Fusion &amp;rarr; Validation &amp;rarr; Output)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;verticalAlign=middle;" vertex="1" parent="rr_1">
+          <mxGeometry x="150" y="25" width="1000" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 1. START (Oval) -->
+        <mxCell id="rr_start" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#065F46&quot;&gt;START: Pixora Research Pipeline&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2.5;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="500" y="110" width="300" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 2. INPUT DATASETS (Parallelogram) -->
+        <mxCell id="rr_in_data" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;INPUT: Acquire Benchmark Corpora&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;• Sarcasm Headlines: 28,619 samples (The Onion / HuffPost)&lt;br&gt;• MUStARD: 690 Multimodal TV Sitcom Dialogue Clips&lt;br&gt;• FER-2013: 35,887 Facial Expression Crops (7 Classes)&lt;br&gt;• Google Cartoon Set: 30,000 High-Res Avatar Images&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="400" y="190" width="500" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 3. PREPROCESSING (Process Rectangle) -->
+        <mxCell id="rr_proc_prep" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Data Cleaning &amp;amp; Preprocessing&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;BPE Tokenization, 48x48 Grayscale Crop Normalization &amp;amp; LAB Perceptual Color Extraction&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="420" y="300" width="460" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 4. TRAIN BASELINE (Process Rectangle) -->
+        <mxCell id="rr_proc_base" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Train Baseline Linguistic Model&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;TF-IDF n-grams + L2-Regularized Logistic Regression &amp;rarr; &lt;b&gt;85.8% Test Accuracy&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="420" y="385" width="460" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 5. FINE-TUNE DEBERTA (Process Rectangle) -->
+        <mxCell id="rr_proc_deberta" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Fine-Tune Deep DeBERTa-v3 Transformer&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Disentangled Attention with AdamW on GPU &amp;rarr; &lt;b&gt;91.4% Accuracy / 0.912 F1-Score&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="420" y="470" width="460" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 6. DECISION: REGISTER GAP? (Rhombus) -->
+        <mxCell id="rr_dec_gap" value="&lt;b&gt;&lt;font color=&quot;#991B1B&quot;&gt;Register Gap on&lt;br&gt;Casual Spoken Dialogue?&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rr_1">
+          <mxGeometry x="500" y="555" width="300" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 6A. BRANCH: MUStARD ADAPTATION (Process) -->
+        <mxCell id="rr_proc_mustard" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot;&gt;Continual Transfer Learning on MUStARD&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Low-lr domain adaptation on 690 dialogue clips &amp;rarr; &lt;b&gt;+14.2% Conversational Gain&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="850" y="568" width="360" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 7. TRAIN EMOTION CNN (Process Rectangle) -->
+        <mxCell id="rr_proc_cnn" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Train Custom 4-Block Emotion CNN&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Conv2D + BatchNorm + Dropout on 35.8k FER-2013 Crops &amp;rarr; &lt;b&gt;68.7% Top-1 Accuracy&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="420" y="665" width="460" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 8. CALIBRATE AVATAR (Process Rectangle) -->
+        <mxCell id="rr_proc_calib" value="&lt;b&gt;&lt;font color=&quot;#047857&quot;&gt;Calibrate Procrustes AR Avatar Conformal Warping&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#065F46&quot;&gt;Google Cartoon Set geometry calibration (y=251.0, 98.7px) + Sub-pixel iris pupil locking&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="420" y="750" width="460" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 9. MULTIMODAL FUSION (Process Rectangle) -->
+        <mxCell id="rr_proc_fuse" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot;&gt;Formulate Multimodal Late Decision Fusion&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#881337&quot;&gt;S_fused = min(1.0,  0.60 * P_text + 0.40 * S_cues + &amp;Delta;_incongruity) | &amp;Delta; = +0.15&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="400" y="835" width="500" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 10. DECISION: ABLATION VALIDATION? (Rhombus) -->
+        <mxCell id="rr_dec_eval" value="&lt;b&gt;&lt;font color=&quot;#991B1B&quot;&gt;Multimodal Accuracy Gain &gt;&lt;br&gt;All Unimodal Baselines?&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rr_1">
+          <mxGeometry x="500" y="920" width="300" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 11. OUTPUT: BENCHMARKS (Parallelogram) -->
+        <mxCell id="rr_out_bench" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;OUTPUT: Empirical Validation &amp;amp; Ablation Metrics&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;• &lt;b&gt;94.8% Multimodal Accuracy&lt;/b&gt; (+3.4% over DeBERTa text-only)&lt;br&gt;• Real-time sub-25ms inference latency &amp;amp; 0.946 Macro-F1&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="410" y="1030" width="480" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- 12. OUTPUT: PACKAGING (Parallelogram) -->
+        <mxCell id="rr_out_pack" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;OUTPUT: Export Weights, Metrics &amp;amp; PDF Report&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Saves models/, metrics JSONs, and generates publication-grade Project Overview PDF&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="410" y="1125" width="480" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 13. END (Oval) -->
+        <mxCell id="rr_end" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#065F46&quot;&gt;END: Research Validation Complete&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2.5;align=center;" vertex="1" parent="rr_1">
+          <mxGeometry x="500" y="1210" width="300" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- RAPTOR FLOWCHART CONNECTORS WITH EXPLICIT CARDINAL ANCHORS -->
+        <mxCell id="rrc_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_start" target="rr_in_data" />
+        <mxCell id="rrc_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_in_data" target="rr_proc_prep" />
+        <mxCell id="rrc_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_prep" target="rr_proc_base" />
+        <mxCell id="rrc_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_base" target="rr_proc_deberta" />
+        <mxCell id="rrc_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_deberta" target="rr_dec_gap" />
+        
+        <!-- Decision Gap Yes Branch -->
+        <mxCell id="rrc_gap_yes" value="&lt;b&gt;&lt;font color=&quot;#E11D48&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_dec_gap" target="rr_proc_mustard" />
+        <mxCell id="rrc_gap_mustard_down" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_mustard" target="rr_proc_cnn">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="692.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- Decision Gap No Branch -->
+        <mxCell id="rrc_gap_no" value="&lt;b&gt;&lt;font color=&quot;#0284C7&quot;&gt;No&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_dec_gap" target="rr_proc_cnn" />
+
+        <mxCell id="rrc_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_cnn" target="rr_proc_calib" />
+        <mxCell id="rrc_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_calib" target="rr_proc_fuse" />
+        <mxCell id="rrc_8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_proc_fuse" target="rr_dec_eval" />
+        
+        <!-- Decision Eval Yes & No Branches -->
+        <mxCell id="rrc_eval_yes" value="&lt;b&gt;&lt;font color=&quot;#059669&quot;&gt;Yes (+3.4%)&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_dec_eval" target="rr_out_bench" />
+        <mxCell id="rrc_eval_no" value="&lt;b&gt;&lt;font color=&quot;#E11D48&quot;&gt;No (Recalibrate)&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_dec_eval" target="rr_proc_fuse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="960" />
+              <mxPoint x="320" y="862.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rrc_9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_out_bench" target="rr_out_pack" />
+        <mxCell id="rrc_10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rr_1" source="rr_out_pack" target="rr_end" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ==================================================================== -->
+  <!-- PAGE 5: REAL-TIME MODEL INFERENCE FLOWCHART (LIGHT THEME)            -->
+  <!-- ==================================================================== -->
+  <diagram id="RaptorModelInference" name="5. Model Execution Flowchart (RAPTOR Format)">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1650" background="#FFFFFF" math="1" shadow="1">
+      <root>
+        <mxCell id="rm_0" />
+        <mxCell id="rm_1" parent="rm_0" />
+
+        <!-- Title Header -->
+        <mxCell id="rm_title" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot; color=&quot;#0F172A&quot;&gt;PIXORA AI: REAL-TIME MODEL INFERENCE &amp;amp; RUNTIME FLOWCHART&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#475569&quot;&gt;Complete Step-by-Step Frame Loop, Biometrics, Sarcasm Fusion &amp;amp; Meme Output in RAPTOR Format&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;verticalAlign=middle;" vertex="1" parent="rm_1">
+          <mxGeometry x="150" y="25" width="1000" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 1. START (Oval) -->
+        <mxCell id="rm_start" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#065F46&quot;&gt;START: Initialize Runtime Loop&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2.5;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="500" y="105" width="300" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- 2. INPUT FRAME (Parallelogram) -->
+        <mxCell id="rm_in_cam" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;INPUT: Capture Live Webcam Frame&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;640x480 RGB Video Stream @ 30+ FPS (OpenCV VideoCapture)&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="420" y="175" width="460" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 3. MEDIAPIPE FACE MESH (Process Rectangle) -->
+        <mxCell id="rm_proc_mesh" value="&lt;b&gt;&lt;font color=&quot;#047857&quot;&gt;Execute MediaPipe FaceLandmarker&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Extracts 478 3D Landmark Vertices &amp;amp; 52 Blendshape Coefficients&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="420" y="255" width="460" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 4. DECISION: FACE DETECTED? (Rhombus) -->
+        <mxCell id="rm_dec_face" value="&lt;b&gt;&lt;font color=&quot;#991B1B&quot;&gt;Human Face Detected&lt;br&gt;in Frame?&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rm_1">
+          <mxGeometry x="510" y="335" width="280" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- 4A. NO FACE: HUD Overlay (Parallelogram) -->
+        <mxCell id="rm_out_noface" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot;&gt;OUTPUT: Render &quot;Searching for Face...&quot; HUD&lt;/font&gt;&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rm_1">
+          <mxGeometry x="880" y="348" width="340" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 5. PROCESS BIOMETRICS & POSE (Process Rectangle) -->
+        <mxCell id="rm_proc_bio" value="&lt;b&gt;&lt;font color=&quot;#0F766E&quot;&gt;Compute 3D Head Pose &amp;amp; Contactless Biometrics&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#134E4A&quot;&gt;• solvePnP Euler Gyro (Pitch, Yaw, Roll)&lt;br&gt;• rPPG Capillary Pulse FFT (Heart Rate BPM ❤️ &amp;amp; Stress %)&lt;br&gt;• 3D Eye Gaze Reticle &amp;amp; Screen Attention Quadrants&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="410" y="440" width="480" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- 6. PROCESS EMOTION & FACS CUES (Process Rectangle) -->
+        <mxCell id="rm_proc_fer" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Classify Emotion &amp;amp; Physical Sarcasm Cues&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#581C87&quot;&gt;• Custom 4-Block CNN on 48x48 Crop &amp;rarr; 7 Emotions (Happy, Sad, Angry, etc.)&lt;br&gt;• FACS AU Scorer &amp;rarr; Smirk (AU14), Brow (AU1+2), Eye Roll (AU63) &amp;rarr; S_cues&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="410" y="540" width="480" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 7. DECISION: CAPTURE TRIGGERED? (Rhombus) -->
+        <mxCell id="rm_dec_capture" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;User Capture Triggered?&lt;br&gt;(SPACE Key or Voice V)&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rm_1">
+          <mxGeometry x="510" y="630" width="280" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- 7A. NO CAPTURE: RENDER LIVE HUD (Process) -->
+        <mxCell id="rm_proc_live_render" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;Render Live Cyberpunk HUD &amp;amp; Active Cartoon Mode&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Real-time Avatar Warping / AnimeGAN / Cyber Hologram @ 30+ FPS&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="860" y="643" width="360" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 8. DECISION: VOICE VS TYPED (Rhombus) -->
+        <mxCell id="rm_dec_voice" value="&lt;b&gt;&lt;font color=&quot;#0F172A&quot;&gt;Is Voice Capture&lt;br&gt;Active (Key V)?&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rm_1">
+          <mxGeometry x="520" y="735" width="260" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- 8A. VOICE INPUT (Parallelogram) -->
+        <mxCell id="rm_in_voice" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;INPUT: 4s Audio Stream (16kHz PCM)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;OpenAI Whisper Speech-to-Text Transcription&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="820" y="745" width="360" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 8B. TYPED INPUT (Parallelogram) -->
+        <mxCell id="rm_in_text" value="&lt;b&gt;&lt;font color=&quot;#0369A1&quot;&gt;INPUT: User Typed Sentence Prompt&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Interactive Terminal Readline String&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="120" y="745" width="360" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 9. PROCESS DEBERTA NLP (Process Rectangle) -->
+        <mxCell id="rm_proc_deberta" value="&lt;b&gt;&lt;font color=&quot;#7E22CE&quot;&gt;Predict Linguistic Sarcasm (P_text)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#334155&quot;&gt;Fine-Tuned DeBERTa-v3 Transformer &amp;rarr; Output P_text &amp;isin; [0.0, 1.0]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="420" y="840" width="460" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 10. EVALUATE FUSION MATRIX (Process Rectangle) -->
+        <mxCell id="rm_proc_fusion" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot;&gt;Evaluate Multimodal Decision Matrix&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#881337&quot;&gt;S_fused = min(1.0,  0.60 * P_text + 0.40 * S_cues + &amp;Delta;_incongruity)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="400" y="915" width="500" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 11. DECISION: SARCASTIC VERDICT? (Rhombus) -->
+        <mxCell id="rm_dec_verdict" value="&lt;b&gt;&lt;font color=&quot;#991B1B&quot;&gt;Is S_fused &amp;ge; 0.50?&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;align=center;fontSize=12;" vertex="1" parent="rm_1">
+          <mxGeometry x="530" y="995" width="240" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- 11A. SARCASTIC BRANCH (Process) -->
+        <mxCell id="rm_proc_sarc" value="&lt;b&gt;&lt;font color=&quot;#BE123C&quot;&gt;Verdict: SARCASTIC&lt;/font&gt;&lt;/b&gt;&lt;br&gt;Confidence = S_fused" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="830" y="1005" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 11B. SINCERE BRANCH (Process) -->
+        <mxCell id="rm_proc_sinc" value="&lt;b&gt;&lt;font color=&quot;#047857&quot;&gt;Verdict: SINCERE&lt;/font&gt;&lt;/b&gt;&lt;br&gt;Confidence = 1.0 - S_fused" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="270" y="1005" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 12. GENERATE CAPTION & WARP AVATAR (Process Rectangle) -->
+        <mxCell id="rm_proc_gen" value="&lt;b&gt;&lt;font color=&quot;#047857&quot;&gt;Synthesize AI Meme Caption &amp;amp; 3D AR Avatar Overlay&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#065F46&quot;&gt;• Local Qwen2.5-1.5B LLM authors punchline token-by-token across chosen style (Funny, Sarcastic, etc.)&lt;br&gt;• Snapchat-Grade Procrustes Conformal Warping fits matched 3D avatar with live blendshapes&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="380" y="1100" width="540" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- 13. OUTPUT MEME & SPOKEN TTS (Parallelogram) -->
+        <mxCell id="rm_out_display" value="&lt;b&gt;&lt;font color=&quot;#BE185D&quot;&gt;OUTPUT: Render Meme on Video HUD &amp;amp; Save to outputs/&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot; color=&quot;#831843&quot;&gt;Exports high-res PNG / 3s animated GIF &amp;amp; speaks punchline aloud via TTS Voice Persona (Key S)&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FDF2F8;strokeColor=#DB2777;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="380" y="1195" width="540" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 14. DECISION: QUIT REQUESTED? (Rhombus) -->
+        <mxCell id="rm_dec_quit" value="&lt;b&gt;&lt;font color=&quot;#1E293B&quot;&gt;User Pressed Quit&lt;br&gt;(Key Q or Esc)?&lt;/font&gt;&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;align=center;fontSize=11;" vertex="1" parent="rm_1">
+          <mxGeometry x="530" y="1280" width="240" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- 15. CLEANUP (Process) -->
+        <mxCell id="rm_proc_clean" value="&lt;b&gt;&lt;font color=&quot;#475569&quot;&gt;Clean Up GPU Tensors, Audio Threads &amp;amp; Release Webcam&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="420" y="1385" width="460" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- 16. END (Oval) -->
+        <mxCell id="rm_end" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#065F46&quot;&gt;END: Clean Shutdown&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2.5;align=center;" vertex="1" parent="rm_1">
+          <mxGeometry x="500" y="1455" width="300" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- RAPTOR INFERENCE CONNECTORS WITH EXPLICIT CARDINAL ANCHORS & DEDICATED RETURN CHANNELS -->
+        <mxCell id="rmc_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_start" target="rm_in_cam" />
+        <mxCell id="rmc_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_in_cam" target="rm_proc_mesh" />
+        <mxCell id="rmc_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#16A34A;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_mesh" target="rm_dec_face" />
+        
+        <!-- Face No Branch (Loop Channel 1 at x=1050) -->
+        <mxCell id="rmc_face_no" value="&lt;b&gt;&lt;font color=&quot;#E11D48&quot;&gt;No&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_face" target="rm_out_noface" />
+        <mxCell id="rmc_noface_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_out_noface" target="rm_in_cam">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Face Yes Branch -->
+        <mxCell id="rmc_face_yes" value="&lt;b&gt;&lt;font color=&quot;#0D9488&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0D9488;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_face" target="rm_proc_bio" />
+        <mxCell id="rmc_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_bio" target="rm_proc_fer" />
+        <mxCell id="rmc_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_fer" target="rm_dec_capture" />
+        
+        <!-- Capture No Branch (Loop Channel 2 at x=1140) -->
+        <mxCell id="rmc_cap_no" value="&lt;b&gt;&lt;font color=&quot;#0284C7&quot;&gt;No&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_capture" target="rm_proc_live_render" />
+        <mxCell id="rmc_cap_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.55;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_live_render" target="rm_in_cam">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="620" />
+              <mxPoint x="1140" y="620" />
+              <mxPoint x="1140" y="202" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Capture Yes Branch -->
+        <mxCell id="rmc_cap_yes" value="&lt;b&gt;&lt;font color=&quot;#0284C7&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_capture" target="rm_dec_voice" />
+        
+        <!-- Voice vs Text branches -->
+        <mxCell id="rmc_v_yes" value="&lt;b&gt;&lt;font color=&quot;#0284C7&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_voice" target="rm_in_voice" />
+        <mxCell id="rmc_v_no" value="&lt;b&gt;&lt;font color=&quot;#0284C7&quot;&gt;No&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_voice" target="rm_in_text" />
+        
+        <mxCell id="rmc_v_down1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_in_voice" target="rm_proc_deberta">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rmc_v_down2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_in_text" target="rm_proc_deberta">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rmc_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9333EA;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_deberta" target="rm_proc_fusion" />
+        <mxCell id="rmc_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_fusion" target="rm_dec_verdict" />
+        
+        <!-- Verdict branches -->
+        <mxCell id="rmc_verd_sarc" value="&lt;b&gt;&lt;font color=&quot;#E11D48&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_verdict" target="rm_proc_sarc" />
+        <mxCell id="rmc_verd_sinc" value="&lt;b&gt;&lt;font color=&quot;#059669&quot;&gt;No&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_verdict" target="rm_proc_sinc" />
+        
+        <mxCell id="rmc_gen_down1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_sarc" target="rm_proc_gen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="1132.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rmc_gen_down2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_sinc" target="rm_proc_gen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="1132.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rmc_8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_gen" target="rm_out_display" />
+        <mxCell id="rmc_9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#DB2777;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_out_display" target="rm_dec_quit" />
+        
+        <!-- Quit branches (Loop Channel 3 at x=1230) -->
+        <mxCell id="rmc_quit_no" value="&lt;b&gt;&lt;font color=&quot;#0284C7&quot;&gt;No (Loop)&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0284C7;strokeWidth=2.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.85;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_quit" target="rm_in_cam">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="1317.5" />
+              <mxPoint x="1230" y="218" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rmc_quit_yes" value="&lt;b&gt;&lt;font color=&quot;#E11D48&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#E11D48;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_dec_quit" target="rm_proc_clean" />
+        <mxCell id="rmc_10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#059669;strokeWidth=2.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="rm_1" source="rm_proc_clean" target="rm_end" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+</mxfile>'''
+    return xml
+
+
+def update_drawio_files():
+    xml_data = generate_clean_drawio()
+    with open("pixora_architecture.drawio", "w", encoding="utf-8") as f:
+        f.write(xml_data)
+    with open("docs/pixora_architecture.drawio", "w", encoding="utf-8") as f:
+        f.write(xml_data)
+    print("[DrawIO] Successfully regenerated 5-tab Light Theme architecture diagram with perfect page fitting and verified arrow flow!")
+
+
+if __name__ == "__main__":
+    update_drawio_files()

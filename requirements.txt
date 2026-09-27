@@ -1,0 +1,27 @@
+# Core requirements -- the $0 path. Everything here is free and open-source.
+# Install with:  pip install -r requirements.txt
+#
+# IMPORTANT: this must be `opencv-python` (NOT opencv-python-headless).
+# The headless build has no GUI support, so cv2.imshow() (the live video
+# window) will silently fail to display anything.
+opencv-python>=4.8.0
+
+# Face detection + 478 landmarks + 52 blendshapes
+mediapipe>=0.10.30
+
+# Facial emotion recognition (7-class)
+deepface>=0.0.95
+tf-keras>=2.16.0
+# ^ required alongside tensorflow>=2.16 -- without it DeepFace raises
+#   "ValueError: ... requires tf-keras package". See README Troubleshooting.
+
+# Baseline sarcasm text classifier (ships pre-trained -- no GPU/training needed)
+scikit-learn>=1.4.0
+joblib>=1.3.0
+pandas>=2.0.0
+
+# Meme compositing + captions
+Pillow>=10.0.0
+requests>=2.31.0
+
+numpy>=1.24.0
